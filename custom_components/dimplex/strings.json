@@ -1,0 +1,79 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Set up Dimplex Heat Pump",
+        "description": "Choose your authentication method.",
+        "menu_options": {
+          "credentials": "Sign in with username and password",
+          "token": "Manual token entry (advanced)"
+        }
+      },
+      "credentials": {
+        "title": "Dimplex Login",
+        "description": "Sign in with your Dimplex account credentials (same as in the Dimplex app).",
+        "data": {
+          "username": "Email / Username",
+          "password": "Password"
+        }
+      },
+      "device": {
+        "title": "Select Device",
+        "description": "Select your heat pump from the list or enter the Device ID manually.",
+        "data": {
+          "device_id": "Device",
+          "device_id_manual": "Device ID (manual)"
+        },
+        "data_description": {
+          "device_id_manual": "e.g. sn-UHI-mac-B8-27-FA-63-38-4A or just B8-27-FA-63-38-4A"
+        }
+      },
+      "token": {
+        "title": "Manual Token Entry",
+        "description": "Enter your Dimplex device credentials. Find the Device ID in the app or API URL. Get the Refresh Token by intercepting the app's network traffic.",
+        "data": {
+          "device_id": "Device ID",
+          "refresh_token": "Refresh Token"
+        },
+        "data_description": {
+          "device_id": "e.g. sn-UHI-mac-B8-27-FA-63-38-4A",
+          "refresh_token": "OAuth2 Refresh Token from Dimplex app"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Reauthentication Required",
+        "description": "Your session has expired. Choose a method to sign in again.",
+        "menu_options": {
+          "reauth_credentials": "Sign in with username and password",
+          "reauth_token": "Manual token entry"
+        }
+      },
+      "reauth_credentials": {
+        "title": "Sign In Again",
+        "description": "Sign in again with your Dimplex account credentials.",
+        "data": {
+          "username": "Email / Username",
+          "password": "Password"
+        }
+      },
+      "reauth_token": {
+        "title": "Enter New Token",
+        "description": "Enter a new refresh token.",
+        "data": {
+          "refresh_token": "New Refresh Token"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Invalid credentials",
+      "cannot_connect": "Connection failed",
+      "invalid_device_id": "Invalid device ID",
+      "no_device_selected": "No device selected",
+      "unknown": "Unknown error"
+    },
+    "abort": {
+      "already_configured": "Device already configured",
+      "reauth_successful": "Authentication successful"
+    }
+  }
+}

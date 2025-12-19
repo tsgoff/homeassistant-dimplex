@@ -1,0 +1,192 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Dimplex Wärmepumpe einrichten",
+        "description": "Wähle die Authentifizierungsmethode.",
+        "menu_options": {
+          "credentials": "Mit Benutzername und Passwort anmelden",
+          "token": "Manuell mit Refresh Token (Experten)"
+        }
+      },
+      "credentials": {
+        "title": "Dimplex Login",
+        "description": "Melde dich mit deinen Dimplex-Kontodaten an (die gleichen wie in der Dimplex App).",
+        "data": {
+          "username": "E-Mail / Benutzername",
+          "password": "Passwort"
+        }
+      },
+      "device": {
+        "title": "Gerät auswählen",
+        "description": "Wähle deine Wärmepumpe aus der Liste oder gib die Device ID manuell ein.",
+        "data": {
+          "device_id": "Gerät",
+          "device_id_manual": "Device ID (manuell)"
+        },
+        "data_description": {
+          "device_id_manual": "z.B. sn-UHI-mac-B8-27-FA-63-38-4A oder nur B8-27-FA-63-38-4A"
+        }
+      },
+      "token": {
+        "title": "Manuelle Token-Eingabe",
+        "description": "Gib deine Dimplex-Gerätedaten ein. Die Device ID findest du in der App oder in der API-URL. Den Refresh Token kannst du durch Abfangen des Netzwerkverkehrs der App erhalten.",
+        "data": {
+          "device_id": "Device ID",
+          "refresh_token": "Refresh Token"
+        },
+        "data_description": {
+          "device_id": "z.B. sn-UHI-mac-B8-27-FA-63-38-4A",
+          "refresh_token": "OAuth2 Refresh Token aus der Dimplex App"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Erneute Authentifizierung erforderlich",
+        "description": "Deine Sitzung ist abgelaufen. Wähle eine Methode zur erneuten Anmeldung.",
+        "menu_options": {
+          "reauth_credentials": "Mit Benutzername und Passwort anmelden",
+          "reauth_token": "Manuell mit Refresh Token"
+        }
+      },
+      "reauth_credentials": {
+        "title": "Erneut anmelden",
+        "description": "Melde dich erneut mit deinen Dimplex-Kontodaten an.",
+        "data": {
+          "username": "E-Mail / Benutzername",
+          "password": "Passwort"
+        }
+      },
+      "reauth_token": {
+        "title": "Neuen Token eingeben",
+        "description": "Gib einen neuen Refresh Token ein.",
+        "data": {
+          "refresh_token": "Neuer Refresh Token"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Ungültige Anmeldedaten",
+      "cannot_connect": "Verbindung fehlgeschlagen",
+      "invalid_device_id": "Ungültige Device ID",
+      "no_device_selected": "Kein Gerät ausgewählt",
+      "unknown": "Unbekannter Fehler"
+    },
+    "abort": {
+      "already_configured": "Gerät ist bereits konfiguriert",
+      "reauth_successful": "Authentifizierung erfolgreich"
+    }
+  },
+  "entity": {
+    "sensor": {
+      "temperature_warmwater": {
+        "name": "Warmwasser Temperatur"
+      },
+      "temperature_return": {
+        "name": "Rücklauf Temperatur"
+      },
+      "temperature_supply": {
+        "name": "Vorlauf Temperatur"
+      },
+      "temperature_hk": {
+        "name": "Heizkreis Temperatur"
+      },
+      "temperature_hk_target": {
+        "name": "Heizkreis Solltemperatur"
+      },
+      "temperature_hk_actual": {
+        "name": "Heizkreis Isttemperatur"
+      },
+      "temperature_system_target": {
+        "name": "System Solltemperatur"
+      },
+      "temperature_system_actual": {
+        "name": "System Isttemperatur"
+      },
+      "temperature_room_target": {
+        "name": "Raum Solltemperatur"
+      },
+      "temperature_room_actual": {
+        "name": "Raum Isttemperatur"
+      },
+      "temperature_dewpoint": {
+        "name": "Taupunkt"
+      },
+      "vent_temp_outside": {
+        "name": "Lüftung Außenluft Temperatur"
+      },
+      "vent_temp_supply": {
+        "name": "Lüftung Zuluft Temperatur"
+      },
+      "vent_temp_exhaust": {
+        "name": "Lüftung Abluft Temperatur"
+      },
+      "vent_temp_outgoing": {
+        "name": "Lüftung Fortluft Temperatur"
+      },
+      "vent_humidity_exhaust": {
+        "name": "Lüftung Abluft Feuchtigkeit"
+      },
+      "vent_humidity_outside": {
+        "name": "Lüftung Außenluft Feuchtigkeit"
+      },
+      "vent_voc_exhaust": {
+        "name": "Lüftung Abluft VOC"
+      },
+      "vent_voc_outside": {
+        "name": "Lüftung Außenluft VOC"
+      },
+      "vent_filter_days": {
+        "name": "Lüftung Filterrestlaufzeit"
+      },
+      "vent_exhaust_flow": {
+        "name": "Lüftung Abluft Volumenstrom"
+      },
+      "vent_supply_flow": {
+        "name": "Lüftung Zuluft Volumenstrom"
+      },
+      "vent_supply_fan_speed": {
+        "name": "Lüftung Zuluft Lüfterdrehzahl"
+      },
+      "vent_exhaust_fan_speed": {
+        "name": "Lüftung Abluft Lüfterdrehzahl"
+      },
+      "compressor_runtime": {
+        "name": "Verdichter Laufzeit"
+      },
+      "compressor_clocks_total": {
+        "name": "Verdichter Takte Gesamt"
+      },
+      "compressor_clocks_heating": {
+        "name": "Verdichter Takte Heizung"
+      },
+      "compressor_clocks_hotwater": {
+        "name": "Verdichter Takte Warmwasser"
+      },
+      "compressor_clocks_cooling": {
+        "name": "Verdichter Takte Kühlung"
+      },
+      "wp_status": {
+        "name": "Wärmepumpe Status"
+      },
+      "compressor_status": {
+        "name": "Verdichter Status"
+      },
+      "ventilation_mode": {
+        "name": "Lüftungsstufe"
+      },
+      "ventilation_bypass": {
+        "name": "Bypass Status"
+      }
+    },
+    "switch": {
+      "ventilation_bypass": {
+        "name": "Lüftung Bypass"
+      }
+    },
+    "select": {
+      "ventilation_mode": {
+        "name": "Lüftungsstufe"
+      }
+    }
+  }
+}
