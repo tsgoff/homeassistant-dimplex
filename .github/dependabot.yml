@@ -1,0 +1,23 @@
+version: 2
+updates:
+  # GitHub Actions updates (if you add workflows later)
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    labels:
+      - "dependencies"
+      - "github-actions"
+
+  # Python dependencies (for Home Assistant integrations)
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    labels:
+      - "dependencies"
+      - "security"
+    # Only update aiohttp security patches
+    allow:
+      - dependency-name: "aiohttp"
+        dependency-type: "direct"
