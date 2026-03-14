@@ -287,7 +287,7 @@ SENSOR_DESCRIPTIONS: tuple[DimplexSensorEntityDescription, ...] = (
         variable_id=VarID.ENERGY_TOTAL,
         scale=0.1,
         device_class=SensorDeviceClass.ENERGY,
-        native_unit_of_measurement=UnitOfEnergy.KILOWATT_HOUR,
+        native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR,
         state_class=SensorStateClass.TOTAL_INCREASING,
     ),
     DimplexSensorEntityDescription(
@@ -295,7 +295,7 @@ SENSOR_DESCRIPTIONS: tuple[DimplexSensorEntityDescription, ...] = (
         variable_id=VarID.ENERGY_HEATING,
         scale=0.1,
         device_class=SensorDeviceClass.ENERGY,
-        native_unit_of_measurement=UnitOfEnergy.KILOWATT_HOUR,
+        native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR,
         state_class=SensorStateClass.TOTAL_INCREASING,
     ),
     DimplexSensorEntityDescription(
@@ -303,7 +303,7 @@ SENSOR_DESCRIPTIONS: tuple[DimplexSensorEntityDescription, ...] = (
         variable_id=VarID.ENERGY_WARMWATER,
         scale=0.1,
         device_class=SensorDeviceClass.ENERGY,
-        native_unit_of_measurement=UnitOfEnergy.KILOWATT_HOUR,
+        native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR,
         state_class=SensorStateClass.TOTAL_INCREASING,
     ),
     DimplexSensorEntityDescription(
@@ -311,7 +311,7 @@ SENSOR_DESCRIPTIONS: tuple[DimplexSensorEntityDescription, ...] = (
         variable_id=VarID.ENERGY_COOLING,
         scale=0.1,
         device_class=SensorDeviceClass.ENERGY,
-        native_unit_of_measurement=UnitOfEnergy.KILOWATT_HOUR,
+        native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR,
         state_class=SensorStateClass.TOTAL_INCREASING,
     ),
     # Heat quantity sensors
@@ -320,7 +320,7 @@ SENSOR_DESCRIPTIONS: tuple[DimplexSensorEntityDescription, ...] = (
         variable_id=VarID.HEAT_TOTAL,
         scale=0.1,
         device_class=SensorDeviceClass.ENERGY,
-        native_unit_of_measurement=UnitOfEnergy.KILOWATT_HOUR,
+        native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR,
         state_class=SensorStateClass.TOTAL_INCREASING,
     ),
     DimplexSensorEntityDescription(
@@ -328,7 +328,7 @@ SENSOR_DESCRIPTIONS: tuple[DimplexSensorEntityDescription, ...] = (
         variable_id=VarID.HEAT_HEATING,
         scale=0.1,
         device_class=SensorDeviceClass.ENERGY,
-        native_unit_of_measurement=UnitOfEnergy.KILOWATT_HOUR,
+        native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR,
         state_class=SensorStateClass.TOTAL_INCREASING,
     ),
     DimplexSensorEntityDescription(
@@ -336,7 +336,7 @@ SENSOR_DESCRIPTIONS: tuple[DimplexSensorEntityDescription, ...] = (
         variable_id=VarID.HEAT_WARMWATER,
         scale=0.1,
         device_class=SensorDeviceClass.ENERGY,
-        native_unit_of_measurement=UnitOfEnergy.KILOWATT_HOUR,
+        native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR,
         state_class=SensorStateClass.TOTAL_INCREASING,
     ),
 )
