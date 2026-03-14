@@ -73,6 +73,17 @@ class VarID:
     WP_STATUS_2: Final = "1500d"
     COMPRESSOR_SPEED: Final = "1472i"
 
+    # Energy consumption (electrical) — experimental, may vary by firmware/model
+    ENERGY_TOTAL: Final = "2516i"       # Total electrical energy (kWh)
+    ENERGY_HEATING: Final = "1721i"     # Electrical energy for heating (kWh)
+    ENERGY_WARMWATER: Final = "1722i"   # Electrical energy for hot water (kWh)
+    ENERGY_COOLING: Final = "1723i"     # Electrical energy for cooling (kWh)
+
+    # Heat quantity (thermal output) — experimental
+    HEAT_TOTAL: Final = "1480i"         # Total thermal energy produced (kWh)
+    HEAT_HEATING: Final = "1481i"       # Thermal energy for heating (kWh)
+    HEAT_WARMWATER: Final = "1482i"     # Thermal energy for hot water (kWh)
+
 
 # All variable IDs for bulk reading
 ALL_VARIABLE_IDS: Final = [
@@ -112,6 +123,13 @@ ALL_VARIABLE_IDS: Final = [
     VarID.WP_STATUS_1,
     VarID.WP_STATUS_2,
     VarID.COMPRESSOR_SPEED,
+    VarID.ENERGY_TOTAL,
+    VarID.ENERGY_HEATING,
+    VarID.ENERGY_WARMWATER,
+    VarID.ENERGY_COOLING,
+    VarID.HEAT_TOTAL,
+    VarID.HEAT_HEATING,
+    VarID.HEAT_WARMWATER,
 ]
 
 # Status mappings

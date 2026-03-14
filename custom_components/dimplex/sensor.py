@@ -16,6 +16,7 @@ from homeassistant.const import (
     UnitOfTemperature,
     UnitOfTime,
     UnitOfVolumeFlowRate,
+    UnitOfEnergy,
     CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
     REVOLUTIONS_PER_MINUTE,
 )
@@ -279,6 +280,64 @@ SENSOR_DESCRIPTIONS: tuple[DimplexSensorEntityDescription, ...] = (
         key="ventilation_bypass",
         variable_id=VarID.VENT_BYPASS_STATUS,
         icon="mdi:valve",
+    ),
+    # Energy sensors
+    DimplexSensorEntityDescription(
+        key="energy_total",
+        variable_id=VarID.ENERGY_TOTAL,
+        scale=0.1,
+        device_class=SensorDeviceClass.ENERGY,
+        native_unit_of_measurement=UnitOfEnergy.KILOWATT_HOUR,
+        state_class=SensorStateClass.TOTAL_INCREASING,
+    ),
+    DimplexSensorEntityDescription(
+        key="energy_heating",
+        variable_id=VarID.ENERGY_HEATING,
+        scale=0.1,
+        device_class=SensorDeviceClass.ENERGY,
+        native_unit_of_measurement=UnitOfEnergy.KILOWATT_HOUR,
+        state_class=SensorStateClass.TOTAL_INCREASING,
+    ),
+    DimplexSensorEntityDescription(
+        key="energy_hotwater",
+        variable_id=VarID.ENERGY_WARMWATER,
+        scale=0.1,
+        device_class=SensorDeviceClass.ENERGY,
+        native_unit_of_measurement=UnitOfEnergy.KILOWATT_HOUR,
+        state_class=SensorStateClass.TOTAL_INCREASING,
+    ),
+    DimplexSensorEntityDescription(
+        key="energy_cooling",
+        variable_id=VarID.ENERGY_COOLING,
+        scale=0.1,
+        device_class=SensorDeviceClass.ENERGY,
+        native_unit_of_measurement=UnitOfEnergy.KILOWATT_HOUR,
+        state_class=SensorStateClass.TOTAL_INCREASING,
+    ),
+    # Heat quantity sensors
+    DimplexSensorEntityDescription(
+        key="heat_total",
+        variable_id=VarID.HEAT_TOTAL,
+        scale=0.1,
+        device_class=SensorDeviceClass.ENERGY,
+        native_unit_of_measurement=UnitOfEnergy.KILOWATT_HOUR,
+        state_class=SensorStateClass.TOTAL_INCREASING,
+    ),
+    DimplexSensorEntityDescription(
+        key="heat_heating",
+        variable_id=VarID.HEAT_HEATING,
+        scale=0.1,
+        device_class=SensorDeviceClass.ENERGY,
+        native_unit_of_measurement=UnitOfEnergy.KILOWATT_HOUR,
+        state_class=SensorStateClass.TOTAL_INCREASING,
+    ),
+    DimplexSensorEntityDescription(
+        key="heat_hotwater",
+        variable_id=VarID.HEAT_WARMWATER,
+        scale=0.1,
+        device_class=SensorDeviceClass.ENERGY,
+        native_unit_of_measurement=UnitOfEnergy.KILOWATT_HOUR,
+        state_class=SensorStateClass.TOTAL_INCREASING,
     ),
 )
 
