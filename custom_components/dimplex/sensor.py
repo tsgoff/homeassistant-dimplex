@@ -283,14 +283,6 @@ SENSOR_DESCRIPTIONS: tuple[DimplexSensorEntityDescription, ...] = (
     ),
     # Energy sensors
     DimplexSensorEntityDescription(
-        key="energy_total",
-        variable_id=VarID.ENERGY_TOTAL,
-        scale=0.1,
-        device_class=SensorDeviceClass.ENERGY,
-        native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR,
-        state_class=SensorStateClass.TOTAL_INCREASING,
-    ),
-    DimplexSensorEntityDescription(
         key="energy_heating",
         variable_id=VarID.ENERGY_HEATING,
         scale=0.1,
@@ -316,14 +308,6 @@ SENSOR_DESCRIPTIONS: tuple[DimplexSensorEntityDescription, ...] = (
     ),
     # Heat quantity sensors
     DimplexSensorEntityDescription(
-        key="heat_total",
-        variable_id=VarID.HEAT_TOTAL,
-        scale=0.1,
-        device_class=SensorDeviceClass.ENERGY,
-        native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR,
-        state_class=SensorStateClass.TOTAL_INCREASING,
-    ),
-    DimplexSensorEntityDescription(
         key="heat_heating",
         variable_id=VarID.HEAT_HEATING,
         scale=0.1,
@@ -338,6 +322,25 @@ SENSOR_DESCRIPTIONS: tuple[DimplexSensorEntityDescription, ...] = (
         device_class=SensorDeviceClass.ENERGY,
         native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR,
         state_class=SensorStateClass.TOTAL_INCREASING,
+    ),
+    # Diagnostic / Alternative sensors (hidden by default)
+    DimplexSensorEntityDescription(
+        key="energy_total",
+        variable_id=VarID.ENERGY_TOTAL_ALT,
+        scale=0.1,
+        device_class=SensorDeviceClass.ENERGY,
+        native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR,
+        state_class=SensorStateClass.TOTAL_INCREASING,
+        entity_registry_enabled_default=False,
+    ),
+    DimplexSensorEntityDescription(
+        key="heat_total",
+        variable_id=VarID.HEAT_TOTAL_ALT,
+        scale=0.1,
+        device_class=SensorDeviceClass.ENERGY,
+        native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR,
+        state_class=SensorStateClass.TOTAL_INCREASING,
+        entity_registry_enabled_default=False,
     ),
 )
 
