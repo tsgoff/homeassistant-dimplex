@@ -300,7 +300,7 @@ SENSOR_DESCRIPTIONS: tuple[DimplexSensorEntityDescription, ...] = (
     ),
     DimplexSensorEntityDescription(
         key="energy_cooling",
-        variable_id=VarID.ENERGY_COOLING,
+        variable_id=VarID.ENERGY_COOLING_ALT,
         scale=0.1,
         device_class=SensorDeviceClass.ENERGY,
         native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR,

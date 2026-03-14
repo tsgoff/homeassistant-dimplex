@@ -73,14 +73,13 @@ class VarID:
     WP_STATUS_2: Final = "1500d"
     COMPRESSOR_SPEED: Final = "1472i"
 
-    # Electrical Energy & Heat (LA1728 specific candidates)
-    # These are often used in WPM 2170/2171 systems
-    ENERGY_HEATING: Final = "1805i"     # Electrical energy for heating (kWh)
-    ENERGY_WARMWATER: Final = "1806i"   # Electrical energy for hot water (kWh)
-    HEAT_HEATING: Final = "2170i"       # Thermal energy for heating (kWh)
-    HEAT_WARMWATER: Final = "2171i"     # Thermal energy for hot water (kWh)
+    # Electrical Energy & Heat (Confirmed for LA1728)
+    ENERGY_HEATING: Final = "1385i"     # Electrical energy for heating (kWh)
+    ENERGY_WARMWATER: Final = "1390i"   # Electrical energy for hot water (kWh)
+    HEAT_HEATING: Final = "1475i"       # Thermal energy for heating (kWh)
+    HEAT_WARMWATER: Final = "1482i"     # Thermal energy for hot water (kWh)
 
-    # Keep these as fallback/alternative if needed
+    # Fallback/Alternative IDs
     ENERGY_TOTAL_ALT: Final = "2516i"
     ENERGY_COOLING_ALT: Final = "1723i"
     HEAT_TOTAL_ALT: Final = "1480i"
